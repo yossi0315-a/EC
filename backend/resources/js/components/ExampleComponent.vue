@@ -3,8 +3,9 @@
         <div class="row justify-content-center mt-1">
             <div class="col-md-12">
                 <div>
-                    <a class="MyButton">購入</a>
-                    <a class="MyButton">お気に入り</a>
+                    <p>{{ message }}</p>
+                    <button @click="click" class="MyButton">購入</button>
+                    <button class="MyButton">お気に入り</button>
                 </div>
             </div>
         </div>
@@ -12,12 +13,20 @@
 </template>
 
 <script>
+
     export default {
-        props: ['post'],
-        mounted () {
-            console.log(this.post);
+        data:function() {
+            return {
+                message: 'hello',
+            };
+        },
+        methods: {
+            click: function() {
+                this.message = this.message.split('')
+            }
         }
      }
+
 </script>
 
 <style>

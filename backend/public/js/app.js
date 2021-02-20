@@ -1956,10 +1956,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['post'],
-  mounted: function mounted() {
-    console.log(this.post);
+  data: function data() {
+    return {
+      message: 'hello'
+    };
+  },
+  methods: {
+    click: function click() {
+      this.message = this.message.split('').reverse().join('');
+    }
   }
 });
 
@@ -38259,26 +38266,23 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center mt-1" }, [
-        _c("div", { staticClass: "col-md-12" }, [
-          _c("div", [
-            _c("a", { staticClass: "MyButton" }, [_vm._v("購入")]),
-            _vm._v(" "),
-            _c("a", { staticClass: "MyButton" }, [_vm._v("お気に入り")])
-          ])
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center mt-1" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("div", [
+          _c("p", [_vm._v(_vm._s(_vm.message))]),
+          _vm._v(" "),
+          _c("button", { staticClass: "MyButton", on: { click: _vm.click } }, [
+            _vm._v("購入")
+          ]),
+          _vm._v(" "),
+          _c("button", { staticClass: "MyButton" }, [_vm._v("お気に入り")])
         ])
       ])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 

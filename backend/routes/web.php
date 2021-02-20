@@ -25,3 +25,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/favorite', 'favoriteController@index')->name('favorite');
 
+Route::get('/buy', 'BuyController@index')->name('buy');
