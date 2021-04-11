@@ -1,0 +1,7 @@
+- Vue.js
+- Laravel
+- Docker
+- - Ubuntu(wsl)
+- - Nginx
+- - PHP
+- - Mysql
