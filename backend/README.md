@@ -1,5 +1,5 @@
 - Docker
-- - Ubunt(wsl)
+- - Ubuntu(wsl)
 - - Nginx
 - - PHP
 - - Mysql
